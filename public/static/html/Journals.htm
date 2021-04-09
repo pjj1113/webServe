@@ -1,0 +1,129 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <title>Plow Publishing</title>
+</head>
+
+<body>﻿
+
+
+
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <script>document.title = 'Plow Publishing';</script>
+  <meta name="viewport" content="width=1250">
+
+  <script>
+    function stop() {
+      return false;
+    }
+    document.oncontextmenu = stop;
+  </script>
+  <link type="text/css" rel="stylesheet" href="../css/web.css">
+  <script type="text/javascript" src="../js/checkform.js"></script>
+  <script type="text/javascript" src="../js/jquery.js"></script>
+  <script type="text/javascript" src="../js/switchable.js"></script>
+  <script type="text/javascript" src="../js/js.js"></script>
+
+
+
+  <div class="warp bg_top">
+    <div class="mainbox top">
+      <!-- <div class="lang"><a href="http://www.easyedition.net/en/">language: English</a></div> -->
+      <div class="top_layout">
+        <div class="header"><img src="../img/logo.png" title=" Plow Publishing logo"><span>Plow</span><strong>Publishing</strong></div>
+        <span class="fr"  id="login">
+          <a href="./Register.html">Register</a>|<a href="./login.html">Log in</a>
+        </span>
+        <span id="username"> </span>
+      </div>
+    </div>
+  </div>
+
+  <div class="warp bg_menu">
+    <div class="mainbox menu">
+      <ul>
+        <li ><a href="../index.html?pid=1">Home</a></li>
+        <li class="current"><a href="./Journals.htm?pid=2">Journals</a></li>
+        <li><a href="./Guidelines.htm?pid=3">Guidelines</a></li>
+        <li><a href="./AuthoServices.htm?pid=4">Author Services</a></li>
+        <li><a href="./Resources.htm?pid=5">Resources</a></li>
+        <li><a href="./AboutPLOW.htm?pid=6">About PLOW</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="warp bg_banner">
+    <div class="mainbox banner">
+      <img style="width:100%;height:100%" src="../img/43271333914_445f9259a9_o.jpg">
+    </div>
+  </div>
+
+  <div class="warp">
+    <div class="mainbox content">
+
+        <div class="view">
+          <p></p>
+          <p>
+            Aim and Scope<br/>
+            Food, Environment and Public Health (FEH) is a peer-reviewed scientific journal that publishes original articles, reviews, research notes, and essays in the interdisciplinary fields of food safety, environmental health sciences, and public health. It integrates biology, biochemistry, biotechnology, molecular biology, chemistry, computer science, ecology, engineering, epidemiology, genetics, immunology, microbiology, oncology, pathology, pharmacology and toxicology together to solve key issues related to food safety, environmental quality and public health. Therefore, FEH is committed to publishing scientific and technical information about the impact of natural phenomena and human factors on environmental quality, the relationship between environmental health and quality of life, and the relationship between social, cultural, political, and economic aspects, as well as legal considerations related to food tests, environmental medicine and public health. As a comprehensive multidisciplinary journal, FEH is composed of 20 main parts, including the following:
+            food safety and security;<br/>
+            food nutrition and health;<br/>
+            interaction between genes and the environment; <br/>
+            global environmental health; <br/>
+            ecotoxicology and ecological risk assessment and management; <br/>
+            environmental chemistry and computational models; <br/>
+            environmental education and public health; <br/>
+            environmental engineering and technology; <br/>
+            environmental epidemiology and disease control; <br/>
+            environmental genomics and proteomics; <br/>
+            environmental geology and health; <br/>
+            environmental health and disease; <br/>
+            environmental medicine; <br/>
+            environmental policy and management; <br/>
+            environmental toxicology, mutagenesis and carcinogenesis; <br/>
+            health risk assessment and management; <br/>
+            natural resource damage assessment and management.<br/>
+            The journal emphasizes a holistic approach and will be a comprehensive multidisciplinary platform dedicated to solving important public health problems related to food safety and security environmental pollution and degradation. 
+          </p>
+          <p>
+            Editorial Board <br/>
+            Professor Canping Pan   Website <br/>
+            Editor-in-Chief <br/>
+            Department of Applied Chemistry,  <br/>
+            China Agricultural University,  <br/>
+            Beijing, China <br/>
+           Interests: pesticide residue analysis; food safety; environmental pollutant analysis <br/>
+          
+          Editorial Board Members (0) <br/>
+          
+          FEH Editorial Office <br/>
+          feh@plowpub.com <br/>
+          Tel.: +852 95171615 <br/>
+          Mr. Simon Lan <br/>
+          Managing Editor <br/>
+          lan@plowpub.com <br/>
+          Publication Fees <br/>
+          Food, Environment and Health (FEH) is an open access journal. When a paper is accepted for publication, there is no article processing charges. Plow subsidizes and helps authors publish their manuscripts totally free.
+          </p>
+          <p></p>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+
+  <script>
+    var userInfo = localStorage.getItem('userInfo') ? JSON.parse(localStorage.getItem('userInfo')) : '';
+    if(userInfo) {
+      $('#login').css({"display":"none"})
+      $('#username').css({"display":"block"})
+      $('#username').html('You are welcome '+`<strong>${userInfo.user}</strong>`)
+    } else {
+      ('#username').css({"display":"none"})
+    }
+  </script>
+</body>
+
+</html>

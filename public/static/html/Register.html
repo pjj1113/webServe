@@ -1,0 +1,137 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <title>我们的承诺_译偲论文修改专家</title>
+</head>
+<style>
+  .register {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+  }
+
+  .register p {
+    width: 500px;
+    margin-top: 10px;
+  }
+
+  .register p span {
+    display: inline-block;
+    width: 190px;
+    text-align: right;
+    font-size: 17px
+  }
+
+  .register p input {
+    width: 263px;
+    height: 32px;
+    background: url(../img/forminput.jpg) no-repeat;
+    border: none;
+  }
+
+  .register p button {
+    width: 109px;
+    height: 34px;
+    border: none;
+    cursor: pointer;
+    background: url(../img/formbtn_re.jpg) no-repeat;
+    margin-left: 190px;
+    margin-top: 50px;
+  }
+</style>
+
+<body>
+
+
+
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <script>
+    document.title = '我们的承诺_译偲论文修改专家';
+  </script>
+  <meta name="viewport" content="width=1250">
+
+  <script>
+    function stop() {
+      return false;
+    }
+    document.oncontextmenu = stop;
+  </script>
+  <link type="text/css" rel="stylesheet" href="../css/web.css">
+  <script type="text/javascript" src="../js/checkform.js"></script>
+  <script type="text/javascript" src="../js/jquery.js"></script>
+  <script type="text/javascript" src="../js/switchable.js"></script>
+  <script type="text/javascript" src="../js/js.js"></script>
+
+  <div class="warp bg_top">
+    <div class="mainbox top">
+      <!-- <div class="lang"><a href="http://www.easyedition.net/en/">language: English</a></div> -->
+      <div class="top_layout">
+        <div class="header"><img src="../img/logo.png"
+            title=" Plow Publishing logo"><span>Plow</span><strong>Publishing</strong></div>
+            <span class="fr"  id="login">
+              <a href="./Register.html">Register</a>|<a href="./login.html">Log in</a>
+            </span>
+            <span id="username"> </span>
+      </div>
+    </div>
+  </div>
+
+  <div class="warp bg_menu">
+    <div class="mainbox menu">
+      <ul>
+        <li><a href="../index.html?pid=1">Home</a></li>
+        <li><a href="./Journals.htm?pid=2">Journals</a></li>
+        <li><a href="./Guidelines.htm?pid=3">Guidelines</a></li>
+        <li><a href="./AuthoServices.htm?pid=4">Author Services</a></li>
+        <li><a href="./Resources.htm?pid=5">Resources</a></li>
+        <li><a href="./AboutPLOW.htm?pid=6">About PLOW</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="register">
+    <p><span>User：</span><input id="user" type="text" /></p>
+    <p><span>Password：</span><input id="pwd" type="text" /></p>
+    <p><span>Confirm password：</span><input id="confirmPwd" type="text" /></p>
+    <p><span>Email：</span><input id="email" type="text" /></p>
+    <p><button onclick="sub()" id="sub"></button></p>
+  </div>
+  
+  <script>
+    function sub() {
+      var user = $('#user').val();
+      var pwd = $('#pwd').val();
+      var confirmPwd = $('#confirmPwd').val();
+      var email = $('#email').val();
+      if(!check_reg({username:user, userpwd: pwd, userpwd2:confirmPwd, email: email })) {
+        return
+      }
+      var request = new Request('/users/add', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({
+            userName: user,
+            password:pwd, 
+            Email:email
+          })
+      });
+
+      fetch(request).then(res => {
+        return res.text()
+        console.log(res)
+      }).then(res => {
+        if(res.code == 200) {
+          localStorage.setItem('userInfo', JSON.stringify({ user: user }));
+          window.location.href = window.location.origin + '/static/index.html';
+        }
+      });
+    }
+  </script>
+
+</body>
+
+</html>

@@ -1,0 +1,269 @@
+<!-- saved from url=(0027)http://www.easyedition.net/ -->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title> Plow Publishing</title>
+  <style type="text/css">
+    @font-face {
+      font-family: "element-icons";
+      src: url('chrome-extension://moombeodfomdpjnpocobemoiaemednkg/fonts/element-icons.woff') format('woff'),
+        url('chrome-extension://moombeodfomdpjnpocobemoiaemednkg/fonts/element-icons.ttf ') format('truetype');
+      /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+    }
+  </style>
+</head>
+<body>
+  <script>document.title = ' Plow Publishing';</script>
+  <meta name="viewport" content="width=1250">
+
+  <script>
+    function stop() {
+      return false;
+    }
+    document.oncontextmenu = stop;
+  </script>
+  <link type="text/css" rel="stylesheet" href="./css/web.css">
+  <script type="text/javascript" src="./js/checkform.js"></script>
+  <script type="text/javascript" src="./js/jquery.js"></script>
+  <script type="text/javascript" src="./js/jquery.slide.js"></script>
+  <script type="text/javascript" src="./js/index.js"></script>
+
+
+
+  <div class="warp bg_top">
+    <div class="mainbox top">
+      <!-- <div class="lang"><a href="http://www.easyedition.net/en/">language: English</a></div> -->
+      <div class="top_layout">
+        <div class="header"><img src="./img/logo.png" title=" Plow Publishing logo"><span>Plow</span><strong>Publishing</strong></div>
+        <span class="fr"  id="login">
+          <a href="./html/Register.html">Register</a>|<a href="./html/login.html">Log in</a>
+        </span>
+        <span id="username">
+          
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <div class="warp bg_menu">
+    <div class="mainbox menu">
+      <ul>
+        <li class="current"><a href="./index.html?pid=1">Home</a></li>
+        <li><a href="./html/Journals.htm?pid=2">Journals</a></li>
+        <li><a href="./html/Guidelines.htm?pid=3">Guidelines</a></li>
+        <li><a href="./html/AuthoServices.htm?pid=4">Author Services</a></li>
+        <li><a href="./html/Resources.htm?pid=5">Resources</a></li>
+        <li><a href="./html/AboutPLOW.htm?pid=6">About PLOW</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="warp bg_focus">
+    <div class="mainbox focuspic">
+      <div id="focus">
+        <ul style="left: -1960px; width: 2940px;">
+          <li><img src="./img/16591098990_2745cd740b_o.jpg" width="980" height="329"></li>
+          <li><img src="./img/32962336551_dd0ab11723_o.png" width="980" height="329"></li>
+          <li><img src="./img/43271333914_445f9259a9_o.jpg" width="980" height="329"></li>
+        </ul>
+        <div class="btnBg" style="opacity: 0.5;"></div>
+        <div class="btn"><span class="" style="opacity: 0.8;"></span><span style="opacity: 0.8;" class=""></span><span
+            style="opacity: 1;" class="on"></span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- <div class="warp bg_title">
+    <div class="mainbox title">
+      <img src="./英文修改_译偲论文修改专家_files/title_l.jpg" class="fl">
+      <a href="http://www.easyedition.net/register.php"><img src="./英文修改_译偲论文修改专家_files/title_r.jpg" class="fr"></a>
+    </div>
+  </div> -->
+
+  <div class="warp bg_content">
+    <div class="mainbox content">
+      <div class="contentbox_l fl">
+        <h2>Service</h2>
+        <span>
+          360-Degree services24/7 Editorial and publishing support
+        </span>
+      </div>
+      <div class="contentbox_m fl">
+        <h2>Ethics</h2>
+        <span>
+          Full peer review All journals published by PLOW are members of Committee on Publication Ethics (COPE)
+        </span>
+      </div>
+      <div class="contentbox_r fl">
+        <h2>Speed</h2>
+        <span>
+          Days first decision guaranteed Twitter:@PLOWPub  © 2021 PLOW Publishing unless otherwise stated
+        </span>
+      </div>
+      
+    </div>
+  </div>
+  <audio controls="controls" style="display: none;"></audio>
+  <script>
+    var userInfo = localStorage.getItem('userInfo') ? JSON.parse(localStorage.getItem('userInfo')) : '';
+    if(userInfo) {
+      $('#login').css({"display":"none"})
+      $('#username').css({"display":"block"})
+      $('#username').html('You are welcome '+`<strong>${userInfo.user}</strong>`)
+    } else {
+      ('#username').css({"display":"none"})
+    }
+  </script>
+</body>
+<style type="text/css">
+  #yddContainer {
+    display: block;
+    font-family: Microsoft YaHei;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    top: -4px;
+    left: -4px;
+    font-size: 12px;
+    border: 1px solid
+  }
+
+  #yddTop {
+    display: block;
+    height: 22px
+  }
+
+  #yddTopBorderlr {
+    display: block;
+    position: static;
+    height: 17px;
+    padding: 2px 28px;
+    line-height: 17px;
+    font-size: 12px;
+    color: #5079bb;
+    font-weight: bold;
+    border-style: none solid;
+    border-width: 1px
+  }
+
+  #yddTopBorderlr .ydd-sp {
+    position: absolute;
+    top: 2px;
+    height: 0;
+    overflow: hidden
+  }
+
+  .ydd-icon {
+    left: 5px;
+    width: 17px;
+    padding: 0px 0px 0px 0px;
+    padding-top: 17px;
+    background-position: -16px -44px
+  }
+
+  .ydd-close {
+    right: 5px;
+    width: 16px;
+    padding-top: 16px;
+    background-position: left -44px
+  }
+
+  #yddKeyTitle {
+    float: left;
+    text-decoration: none
+  }
+
+  #yddMiddle {
+    display: block;
+    margin-bottom: 10px
+  }
+
+  .ydd-tabs {
+    display: block;
+    margin: 5px 0;
+    padding: 0 5px;
+    height: 18px;
+    border-bottom: 1px solid
+  }
+
+  .ydd-tab {
+    display: block;
+    float: left;
+    height: 18px;
+    margin: 0 5px -1px 0;
+    padding: 0 4px;
+    line-height: 18px;
+    border: 1px solid;
+    border-bottom: none
+  }
+
+  .ydd-trans-container {
+    display: block;
+    line-height: 160%
+  }
+
+  .ydd-trans-container a {
+    text-decoration: none;
+  }
+
+  #yddBottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 22px;
+    line-height: 22px;
+    overflow: hidden;
+    background-position: left -22px
+  }
+
+  .ydd-padding010 {
+    padding: 0 10px
+  }
+
+  #yddWrapper {
+    color: #252525;
+    z-index: 10001;
+    background: url(chrome-extension://eopjamdnofihpioajgfdikhhbobonhbb/ab20.png);
+  }
+
+  #yddContainer {
+    background: #fff;
+    border-color: #4b7598
+  }
+
+  #yddTopBorderlr {
+    border-color: #f0f8fc
+  }
+
+  #yddWrapper .ydd-sp {
+    background-image: url(chrome-extension://eopjamdnofihpioajgfdikhhbobonhbb/ydd-sprite.png)
+  }
+
+  #yddWrapper a,
+  #yddWrapper a:hover,
+  #yddWrapper a:visited {
+    color: #50799b
+  }
+
+  #yddWrapper .ydd-tabs {
+    color: #959595
+  }
+
+  .ydd-tabs,
+  .ydd-tab {
+    background: #fff;
+    border-color: #d5e7f3
+  }
+
+  #yddBottom {
+    color: #363636
+  }
+
+  #yddWrapper {
+    min-width: 250px;
+    max-width: 400px;
+  }
+</style>
+
+</html>
