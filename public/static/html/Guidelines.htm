@@ -24,6 +24,16 @@
     <script type="text/javascript" src="../js/jquery.js"></script>
     <script type="text/javascript" src="../js/switchable.js"></script>
     <script type="text/javascript" src="../js/js.js"></script>
+    <style>
+      h3 {
+        margin-top: 20px;
+      }
+      h2 {
+        margin: 0;
+        padding: 0;
+        margin-top: 30px;
+      }
+    </style>
     <div class="warp bg_top">
         <div class="mainbox top">
             <!-- <div class="lang"><a href="http://www.easyedition.net/en/">language: English</a></div> -->
@@ -57,9 +67,9 @@
     </div>
   </div> -->
 
-    <div class="warp">
+    <div class="warp" style="margin-bottom:50px">
         <div class="mainbox content">
-            <div class="inside_l fl">
+            <div class=" fl">
                 <div class="view">
                     <p></p>
                     <h3>Authors Guidelines</h3>
@@ -208,7 +218,7 @@
 
                     </p>
                     <h3>Preparing Figures, Schemes and Tables</h3>
-                    <ul>
+                    <ul style="list-style: disc;padding-left: 20px ;">
                         <li style="list-style: disc;overflow: visible;padding: 0;">File for Figures and Schemes must be provided during submission in a single zip archive and at a sufficiently high resolution (minimum 1000 pixels width/height, or a resolution of 300 dpi or higher). Common formats are accepted,
                             however, TIFF, JPEG, EPS and PDF are preferred.</li>
                         <li style="list-style: disc;overflow: visible;padding: 0;">Any journal of Plow Publishing can publish multimedia files in articles or as supplementary materials. Please contact the editorial office for further information.</li>
@@ -218,11 +228,208 @@
                         <li style="list-style: disc;overflow: visible;padding: 0;">Authors are encouraged to prepare figures and schemes in color (RGB at 8-bit per channel). There is no additional cost for publishing full color graphics.</li>
                         <li style="list-style: disc;overflow: visible;padding: 0;"></li>
                     </ul>
-                    <h3></h3>
-                    <ul>
-                        <li style="list-style: disc;overflow: visible;padding: 0;"></li>
+                    <h3>Supplementary Materials, Data Deposit and Software Source Code</h3>
+                    <p><strong>Plow Research Data Policies</strong></p>
+                    <p>Plow is committed to supporting open scientific exchange and enabling our authors to achieve best practices in sharing and archiving research data. We encourage all authors of articles published in Plow journals to share their research data. Individual journal guidelines can be found at the journal ‘Instructions for Authors’ page. Data sharing policies concern the minimal dataset that supports the central findings of a published study. Generated data should be publicly available and cited in accordance with journal guidelines.</p>
+                    <p><strong>Plow data policies are informed by TOP Guidelines.</strong></p>
+                    <p>Where ethical, legal or privacy issues are present, data should not be shared. The authors should make any limitations clear in the Data Availability Statement upon submission. Authors should ensure that data shared are in accordance with consent provided by participants on the use of confidential data.</p>
+                    <p>Data Availability Statements provide details regarding where data supporting reported results can be found, including links to publicly archived datasets analyzed or generated during the study</p>
+                    <p>Below are suggested Data Availability Statements:</p>
+                    <ul style="list-style: disc;padding-left: 20px ;">
+                        <li style="list-style: disc;overflow: visible;padding: 0;">
+                          Data available in a publicly accessible repository <br>
+                          The data presented in this study are openly available in [repository name e.g., FigShare] at [doi], reference number [reference number].</li>
+                        <li style="list-style: disc;overflow: visible;padding: 0;">Data available in a publicly accessible repository that does not issue DOIs<br/>
+                          Publicly available datasets were analyzed in this study. This data can be found here: [link/accession number]</li>
+                        <li style="list-style: disc;overflow: visible;padding: 0;">
+                          Data available on request due to restrictions eg privacy or ethical <br/>
+                          The data presented in this study are available on request from the corresponding author. The data are not publicly available due to [insert reason here]
+                        </li>
+                        <li style="list-style: disc;overflow: visible;padding: 0;">
+                          3rd Party Data<br/> 
+                          Restrictions apply to the availability of these data. Data was obtained from [third party] and are available [from the authors / at URL] with the permission of [third party].
+                        </li>
+                        <li style="list-style: disc;overflow: visible;padding: 0;">
+                          Data sharing not applicable <br/>
+                          No new data were created or analyzed in this study. Data sharing is not applicable to this article.
+                        </li>
+                        <li style="list-style: disc;overflow: visible;padding: 0;">
+                          Data is contained within the article or supplementary material <br/>
+                          The data presented in this study are available in [insert article or supplementary material here]
+                        </li>
+                        <p>Data citation:</p>
+                        <li style="list-style: disc;overflow: visible;padding: 0;">[dataset] Authors. Year. Dataset title; Data repository or archive; Version (if any); Persistent identifier (e.g., DOI).</li>
                     </ul>
-                </div>
+
+                    <p><i>Computer Code and Software</i></p>
+                    <p>For work where novel computer code was developed, authors should release the code either by depositing in a recognized, public repository such as GitHub or uploading as supplementary information to the publication. The name, version, corporation and location information for all software used should be clearly indicated. Please include all the parameters used to run software/programs analyses.</p>
+                    <p><i>Supplementary Material</i></p>
+                    <p>Additional data and files can be uploaded as "Supplementary Files" during the manuscript submission process. The supplementary files will also be available to the referees as part of the peer-review process. Any file format is acceptable; however, we recommend that common, non-proprietary formats are used where possible.</p>
+                    <p><i>References in Supplementary Files</i></p>
+                    <p>Citations and References in Supplementary files are permitted provided that they also appear in the reference list of the main text.</p>
+                    <p><i>Unpublished Data</i></p>
+                    <p>Restrictions on data availability should be noted during submission and in the manuscript. "Data not shown" should be avoided: authors are encouraged to publish all observations related to the submitted manuscript as Supplementary Material. "Unpublished data" intended for publication in a manuscript that is either planned, "in preparation" or "submitted" but not yet accepted, should be cited in the text and a reference should be added in the References section. "Personal Communication" should also be cited in the text and reference added in the References section. (see also the Plow reference list and citations style guide).</p>
+                    <p><i>Remote Hosting and Large Data Sets</i></p>
+                    <p>Data may be deposited with specialized service providers or institutional/subject repositories, preferably those that use the DataCite mechanism. Large data sets and files greater than 60 MB must be deposited in this way. For a list of other repositories specialized in scientific and experimental data, please consult databib.org or re3data.org. The data repository name, link to the data set (URL) and accession number, doi or handle number of the data set must be provided in the paper. The journal Data also accepts submissions of data set papers.</p>
+                    <p><i>Remote Hosting and Large Data Sets</i></p>
+                    <p><i>Deposition of Sequences and of Expression Data</i></p>
+                    <p>New sequence information must be deposited to the appropriate database prior to submission of the manuscript. Accession numbers provided by the database should be included in the submitted manuscript. Manuscripts will not be published until the accession number is provided. </p>
+                    <p></p>
+                    <ul style="list-style: disc;padding-left: 20px ;">
+                      <li style="list-style: disc;overflow: visible;padding: 0;">New nucleic acid sequences must be deposited in one of the following databases: GenBank, EMBL, or DDBJ. Sequences should be submitted to only one database.</li>
+                      <li style="list-style: disc;overflow: visible;padding: 0;">New high throughput sequencing (HTS) datasets (RNA-seq, ChIP-Seq, degradome analysis, …) must be deposited either in the GEO database or in the NCBI’s Sequence Read Archive (SRA).</li>
+                      <li style="list-style: disc;overflow: visible;padding: 0;">New microarray data must be deposited either in the GEO or the ArrayExpress databases.The "Minimal Information About a Microarray Experiment" (MIAME) guidelines published by the Microarray Gene Expression Data Society must be followed.</li>
+                      <li style="list-style: disc;overflow: visible;padding: 0;">New protein sequences obtained by protein sequencing must be submitted to UniProt (submission tool SPIN). Annotated protein structure and its reference sequence must be submitted to RCSB of Protein Data Bank.</li>
+                    </ul>
+                    <p>All sequence names and the accession numbers provided by the databases must be provided in the Materials and Methods section of the article.</p>
+                    <p><i>Deposition of Proteomics Data</i></p>
+                    <p>Methods used to generate the proteomics data should be described in detail and we encourage authors to adhere to the "Minimum Information About a Proteomics Experiment". All generated mass spectrometry raw data must be deposited in the appropriate public database such as ProteomeXchange, PRIDE or jPOST. At the time of submission, please include all relevant information in the materials and methods section, such as repository where the data was submitted and link, data set identifier, username and password needed to access the data.</p>
+                    <h2>Research and Publication Ethics</h2>
+                    <h3>Research Ethics<br/>
+                      Research Involving Human Subjects
+                    </h3>
+                    <p>When reporting on research that involves human subjects, human material, human tissues, or human data, authors must declare that the investigations were carried out following the rules of the Declaration of Helsinki of 1975 (https://www.wma.net/what-we-do/medical-ethics/declaration-of-helsinki/), revised in 2013. According to point 23 of this declaration, an approval from an ethics committee should have been obtained before undertaking the research. At a minimum, a statement including the project identification code, date of approval, and name of the ethics committee or institutional review board should be stated in Section ‘Institutional Review Board Statement’ of the article. Data relating to individual participants must be described in detail, but private information identifying participants need not be included unless the identifiable materials are of relevance to the research (for example, photographs of participants’ faces that show a particular symptom). Editors reserve the right to reject any submission that does not meet these requirements.</p>
+                    <p>Example of an ethical statement: "All subjects gave their informed consent for inclusion before they participated in the study. The study was conducted in accordance with the Declaration of Helsinki, and the protocol was approved by the Ethics Committee of XXX (Project identification code)."</p>
+                    <p>A written informed consent for publication must be obtained from participating patients who can be identified (including by the patients themselves). Patients’ initials or other personal identifiers must not appear in any images. For manuscripts that include any case details, personal information, and/or images of patients, authors must obtain signed informed consent from patients (or their relatives/guardians) before submitting to an Plow journal. Patient details must be anonymized as far as possible, e.g., do not mention specific age, ethnicity, or occupation where they are not relevant to the conclusions. A template permission form is available to download. A blank version of the form used to obtain permission (without the patient names or signature) must be uploaded with your submission.</p>
+                    <p>You may refer to our sample form and provide an appropriate form after consulting with your affiliated institution. Alternatively, you may provide a detailed justification of why informed consent is not necessary. For the purposes of publishing in Plow journals, a consent, permission, or release form should include unlimited permission for publication in all formats (including print, electronic, and online), in sublicensed and reprinted versions (including translations and derived works), and in other works and products under open access license. To respect patients’ and any other individual’s privacy, please do not send signed forms. The journal reserves the right to ask authors to provide signed forms if necessary.</p>
+                    <p>Ethical Guidelines for the Use of Animals in Research</p>
+                    <p>The editors will require that the benefits potentially derived from any research causing harm to animals are significant in relation to any cost endured by animals, and that procedures followed are unlikely to cause offense to the majority of readers. Authors should particularly ensure that their research complies with the commonly-accepted '3Rs':</p>
+                    <ul style="list-style: disc;padding-left: 20px ;">
+                        <li style="list-style: disc;overflow: visible;padding: 0;">Replacement of animals by alternatives wherever possible,</li>
+                        <li style="list-style: disc;overflow: visible;padding: 0;">Reduction in number of animals used, and</li>
+                        <li style="list-style: disc;overflow: visible;padding: 0;">Refinement of experimental conditions and procedures to minimize the harm to animals.</li>
+                    </ul>
+                    <p>Any experimental work must also have been conducted in accordance with relevant national legislation on the use of animals for research. For further guidance authors should refer to the Code of Practice for the Housing and Care of Animals Used in Scientific Procedures [1].</p>
+                    <p>Manuscripts containing original descriptions of research conducted in experimental animals must contain details of approval by a properly constituted research ethics committee. As a minimum, the project identification code, date of approval and name of the ethics committee or institutional review board should be stated in Section ‘Institutional Review Board Statement’.</p>
+                    <p>any journal of Plow Publishing endorses the ARRIVE guidelines (www.nc3rs.org.uk/ARRIVE) for reporting experiments using live animals. Authors and reviewers can use the ARRIVE guidelines as a checklist, which can be found at www.nc3rs.org.uk/ARRIVEchecklist.</p>
+                    <p>me Office. Animals (Scientific Procedures) Act 1986. Code of Practice for the Housing and Care of Animals Used in Scientific Procedures. Available online: http://www.official-documents.gov.uk/document/hc8889/hc01/0107/0107.pdf.</p>
+                    <h3>Research Involving Cell Lines</h3>
+                    <p>Methods sections for submissions reporting on research with cell lines should state the origin of any cell lines. For established cell lines the provenance should be stated and references must also be given to either a published paper or to a commercial source. If previously unpublished de novo cell lines were used, including those gifted from another laboratory, details of institutional review board or ethics committee approval must be given, and confirmation of written informed consent must be provided if the line is of human origin.
+                      An example of Ethical Statements:<br>The HCT116 cell line was obtained from XXXX. The MLH1+ cell line was provided by XXXXX, Ltd. The DLD-1 cell line was obtained from Dr. XXXX. The DR-GFP and SA-GFP reporter plasmids were obtained from Dr. XXX and the Rad51K133A expression vector was obtained from Dr. XXXX.</p>
+                    <h3>Research Involving Plants</h3>
+                    <p>Experimental research on plants (either cultivated or wild) including collection of plant material, must comply with institutional, national, or international guidelines. We recommend that authors comply with the Convention on Biological Diversity and the Convention on the Trade in Endangered Species of Wild Fauna and Flora.</p>
+                    <p>For each submitted manuscript supporting genetic information and origin must be provided. For research manuscripts involving rare and non-model plants (other than, e.g., Arabidopsis thaliana, Nicotiana benthamiana, Oryza sativa, or many other typical model plants), voucher specimens must be deposited in an accessible herbarium or museum. Vouchers may be requested for review by future investigators to verify the identity of the material used in the study (especially if taxonomic rearrangements occur in the future). They should include details of the populations sampled on the site of collection (GPS coordinates), date of collection, and document the part(s) used in the study where appropriate. For rare, threatened or endangered species this can be waived but it is necessary for the author to describe this in the cover letter.</p>
+                    <p>Editors reserve the rights to reject any submission that does not meet these requirements.</p>
+                    <p>An example of Ethical Statements:</p>
+                    <p>Torenia fournieri plants were used in this study. White-flowered Crown White (CrW) and violet-flowered Crown Violet (CrV) cultivars selected from ‘Crown Mix’ (XXX Company, City, Country) were kindly provided by Dr. XXX (XXX Institute, City, Country).</p>
+                    <p>Arabidopis mutant lines (SALKxxxx, SAILxxxx,…) were kindly provided by Dr. XXX , institute, city, country).</p>
+                    
+                    <h3>Clinical Trials Registration</h3>
+                    <p>Plow follows the International Committee of Medical Journal Editors (ICMJE) guidelines which require and recommend registration of clinical trials in a public trials registry at or before the time of first patient enrollment as a condition of consideration for publication</p>
+                    <p>Purely observational studies do not require registration. A clinical trial not only refers to studies that take place in a hospital or involve pharmaceuticals, but also refer to all studies which involve participant randomization and group classification in the context of the intervention under assessment.</p>
+                    <p>Authors are strongly encouraged to pre-register clinical trials with an international clinical trials register and cite a reference to the registration in the abstract and Methods section. Suitable databases include clinicaltrials.gov, the EU Clinical Trials Register and those listed by the World Health Organisation International Clinical Trials Registry Platform.</p>
+                    <p>Approval to conduct a study from an independent local, regional, or national review body is not equivalent to prospective clinical trial registration. Plow reserves the right to decline any paper without trial registration for further peer-review. However, if the study protocol has been published before the enrolment, the registration can be waived with correct citation of the published protocol.</p>
+                    <p>Plow requires a completed CONSORT 2010 checklist and flow diagram as a condition of submission when reporting the results of a randomized trial. Templates for these can be found here or on the CONSORT website (http://www.consort-statement.org) which also describes several CONSORT checklist extensions for different designs and types of data beyond two group parallel trials. At minimum, your article should report the content addressed by each item of the checklist.</p>
+                    
+                    <h3>Borders and Territories</h3>
+                    <p>Potential disputes over borders and territories may have particular relevance for authors in describing their research or in an author or editor correspondence address, and should be respected. Content decisions are an editorial matter and where there is a potential or perceived dispute or complaint, the editorial team will attempt to find a resolution that satisfies parties involved.</p>
+                    <p>Plow stays neutral with regard to jurisdictional claims in published maps and institutional affiliations.</p>
+                    <h3>Publication Ethics Statement</h3>
+                    <p>Any journal of Plow Publishing is a member of the Committee on Publication Ethics (COPE). We fully adhere to its Code of Conduct and to its Best Practice Guidelines.</p>
+                    <p>The editors of this journal enforce a rigorous peer-review process together with strict ethical policies and standards to ensure to add high quality scientific works to the field of scholarly publication. Unfortunately, cases of plagiarism, data falsification, image manipulation, inappropriate authorship credit, and the like, do arise. The editors of any journal of Plow Publishing take such publishing ethics issues very seriously and are trained to proceed in such cases with a zero tolerance policy.</p>
+                    <p>Authors wishing to publish their papers in any journal of Plow Publishing must abide to the following:</p>
+                    <ul style="list-style: disc;padding-left: 20px ;">
+                      <li style="list-style: disc;overflow: visible;padding: 0;">Any facts that might be perceived as a possible conflict of interest of the author(s) must be disclosed in the paper prior to submission.</li>
+                      <li style="list-style: disc;overflow: visible;padding: 0;">Authors should accurately present their research findings and include an objective discussion of the significance of their findings.</li>
+                      <li style="list-style: disc;overflow: visible;padding: 0;">Data and methods used in the research need to be presented in sufficient detail in the paper, so that other researchers can replicate the work.</li>
+                      <li style="list-style: disc;overflow: visible;padding: 0;">Raw data should preferably be publicly deposited by the authors before submission of their manuscript. Authors need to at least have the raw data readily available for presentation to the referees and the editors of the journal, if requested. Authors need to ensure appropriate measures are taken so that raw data is retained in full for a reasonable time after publication.</li>
+                      <li style="list-style: disc;overflow: visible;padding: 0;">Simultaneous submission of manuscripts to more than one journal is not tolerated.</li>
+                      <li style="list-style: disc;overflow: visible;padding: 0;">Republishing content that is not novel is not tolerated (for example, an English translation of a paper that is already published in another language will not be accepted)</li>
+                      <li style="list-style: disc;overflow: visible;padding: 0;">If errors and inaccuracies are found by the authors after publication of their paper, they need to be promptly communicated to the editors of this journal so that appropriate actions can be taken. Please refer to our policy regarding Updating Published Papers.</li>
+                      <li style="list-style: disc;overflow: visible;padding: 0;">Your manuscript should not contain any information that has already been published. If you include already published figures or images, please obtain the necessary permission from the copyright holder to publish under the CC-BY license. For further information, see the Rights and Permissions page.</li>
+                      <li style="list-style: disc;overflow: visible;padding: 0;">Plagiarism, data fabrication and image manipulation are not tolerated. <br/>
+                        <li style="list-style: circle;overflow: visible;padding: 0;margin-left: 20px;">
+                          oPlagiarism is not acceptable in any journal of Plow Publishing submissions. <br>
+                          Plagiarism includes copying text, ideas, images, or data from another source, even from your own publications, without giving any credit to the original source.<br/>
+                          Reuse of text that is copied from another source must be between quotes and the original source must be cited. If a study's design or the manuscript's structure or language has been inspired by previous works, these works must be explicitly cited.<br/>
+                          If plagiarism is detected during the peer review process, the manuscript may be rejected. If plagiarism is detected after publication, we may publish a correction or retract the paper.<br/>
+                          </li>
+                        <li style="list-style: circle;overflow: visible;padding: 0;margin-left: 20px;">
+                          oImage files must not be manipulated or adjusted in any way that could lead to misinterpretation of the information provided by the original image. <br>
+                          Irregular manipulation includes: 1) introduction, enhancement, moving, or removing features from the original image; 2) grouping of images that should obviously be presented separately (e.g., from different parts of the same gel, or from different gels); or 3) modifying the contrast, brightness or color balance to obscure, eliminate or enhance some information.<br>
+                          If irregular image manipulation is identified and confirmed during the peer review process, we may reject the manuscript. If irregular image manipulation is identified and confirmed after publication, we may correct or retract the paper.<br>
+                        </li>
+                      </li>
+                    </ul> 
+                    <p>Our in-house editors will investigate any allegations of publication misconduct and may contact the authors' institutions or funders if necessary. If evidence of misconduct is found, appropriate action will be taken to correct or retract the publication. Authors are expected to comply with the best ethical publication practices when publishing with Plow.</p>
+                    <h3>Citation Policy</h3>
+                    <p>Authors should ensure that where material is taken from other sources (including their own published writing) the source is clearly cited and that where appropriate permission is obtained. </p>
+                    <p>Authors should not engage in excessive self-citation of their own work.</p>
+                    <p>Authors should not copy references from other publications if they have not read the cited work.</p>
+                    <p>Authors should not preferentially cite their own or their friends’, peers’, or institution’s publications.</p>
+                    <p>Authors should not cite advertisements or advertorial material.</p>
+                    <p>In accordance with COPE guidelines, we expect that “original wording taken directly from publications by other researchers should appear in quotation marks with the appropriate citations.” This condition also applies to an author’s own work. COPE have produced a discussion document on citation manipulation with recommendations for best practice.</p>
+                    <h3>Copyright</h3>
+                    <p>Articles published in all journals will be Open-Access articles distributed under the terms and conditions of the Creative Commons Attribution License (CC BY). The copyright is retained by the author(s). Plow Publishing will insert the following note at the end of the published text:</p>
+                    <p>© The Author(s) 2021. This article is licensed under a Creative Commons Attribution 4.0 (https://creativecommons.org/licenses/by/4.0/), which permits unrestricted use, sharing, adaptation, distribution and reproduction as long as you give appropriate credit to the original author(s) and the source, provide a link to the license, and indicate if changes were made. </p>
+                    
+                    <h3>English Corrections</h3>
+                    <p>To facilitate proper peer-reviewing of your manuscript, it is essential that it is submitted in grammatically correct English. Advice on some specific language points can be found here.</p>
+                    <p>If you are not a native English speaker, we recommend that you have your manuscript professionally edited before submission or read by a native English-speaking colleague. This can be carried out by Plow’s English editing service. Professional editing will enable reviewers and future readers to more easily read and assess the content of submitted manuscripts. All accepted manuscripts undergo language editing, however an additional fee will be charged to authors if very extensive English corrections must be made by the Editorial Office: pricing is according to the service here.</p>
+                    
+                    <h3>Preprints and Conference Papers</h3>
+                    <p>Any journal of Plow Publishing accepts submissions that have previously been made available as preprints provided that they have not undergone peer review. A preprint is a draft version of a paper made available online before submission to a journal.</p>
+                    <p>Plow operates Preprints, a preprint server to which submitted papers can be uploaded directly after completing journal submission. Note that Preprints operates independently of the journal and posting a preprint does not affect the peer review process. Check the Preprints instructions for authors for further information.</p>
+                    <p>Expanded and high-quality conference papers can be considered as articles if they fulfill the following requirements: (1) the paper should be expanded to the size of a research article; (2) the conference paper should be cited and noted on the first page of the paper; (3) if the authors do not hold the copyright of the published conference paper, authors should seek the appropriate permission from the copyright holder; (4) authors are asked to disclose that it is conference paper in their cover letter and include a statement on what has been changed compared to the original conference paper. Any journal of Plow Publishing does not publish pilot studies or studies with inadequate statistical power.</p>
+
+                    <h3>Authorship</h3>
+                    <p>Plow follows the International Committee of Medical Journal Editors (ICMJE) guidelines which state that, in order to qualify for authorship of a manuscript, the following criteria should be observed:</p>
+
+                    <ul style="list-style: disc;padding-left: 20px ;">
+                      <li style="list-style: disc;overflow: visible;padding: 0;">Substantial contributions to the conception or design of the work; or the acquisition, analysis, or interpretation of data for the work; AND</li>
+                      <li style="list-style: disc;overflow: visible;padding: 0;">Drafting the work or revising it critically for important intellectual content; AND</li>
+                      <li style="list-style: disc;overflow: visible;padding: 0;">Final approval of the version to be published; AND</li>
+                      <li style="list-style: disc;overflow: visible;padding: 0;">Agreement to be accountable for all aspects of the work in ensuring that questions related to the accuracy or integrity of any part of the work are appropriately investigated and resolved.</li>
+                    </ul>
+                    <p>Those who contributed to the work but do not qualify for authorship should be listed in the acknowledgments. More detailed guidance on authorship is given by the International Council of Medical Journal Editors (ICMJE).</p>
+                    <p>Any change to the author list should be approved by all authors including any who have been removed from the list. The corresponding author should act as a point of contact between the editor and the other authors and should keep co-authors informed and involve them in major decisions about the publication. We reserve the right to request confirmation that all authors meet the authorship conditions.</p>
+                    <h2>Editorial Independence</h2>
+                    <h3>Lack of Interference with Editorial Decisions</h3>
+                    <p>Editorial independence is of utmost importance and Plow does not interfere with editorial decisions. All articles published by Plow are peer reviewed and assessed by our independent editorial boards, and Plow staff are not involved in decisions to accept manuscripts. When making an editorial decision, we expect the academic editor to make their decision based only upon: </p>
+                    <ul style="list-style: disc;padding-left: 20px ;">
+                      <li style="list-style: disc;overflow: visible;padding: 0;">The suitability of selected reviewers;</li>
+                      <li style="list-style: disc;overflow: visible;padding: 0;">Adequacy of reviewer comments and author response;</li>
+                      <li style="list-style: disc;overflow: visible;padding: 0;">Overall scientific quality of the paper.</li>
+                    </ul>
+                    <p>In all of our journals, in every aspect of operation, Plow policies are informed by the mission to make science and research findings open and accessible as widely and rapidly as possible.</p>
+                    
+                    <h3>Editors and Editorial Staff as Authors</h3>
+                    <p>Editorial staff or editors shall not be involved in processing their own academic work. Submissions authored by editorial staff/editors will be assigned to at least two independent outside reviewers. Decisions will be made by other Editorial Board Members who do not have a conflict of interest with the author. Journal staff are not involved in the processing of their own work submitted to any Plow journals.</p>
+                    
+                    <h3>Conflict of Interests</h3>
+                    <p>According to The International Committee of Medical Journal Editors, “Authors should avoid entering into agreements with study sponsors, both for-profit and non-profit, that interfere with authors’ access to all of the study’s data or that interfere with their ability to analyze and interpret the data and to prepare and publish manuscripts independently when and where they choose.” </p>
+                    <p>All authors must disclose all relationships or interests that could inappropriately influence or bias their work. Examples of potential conflicts of interest include but are not limited to financial interests (such as membership, employment, consultancies, stocks/shares ownership, honoraria, grants or other funding, paid expert testimonies and patent-licensing arrangements) and non-financial interests (such as personal or professional relationships, affiliations, personal beliefs). </p>
+                    <p>Authors can disclose potential conflicts of interest via the online submission system during the submission process. Declarations regarding conflicts of interest can also be collected via the Plow disclosure form. The corresponding author must include a summary statement in the manuscript in a separate section “Conflicts of Interest” placed just before the reference list. The statement should reflect all the collected potential conflict of interest disclosures in the form. </p>
+                    <p>See below for examples of disclosures:</p>
+                    <p>Conflicts of Interest: Author A has received research grants from Company A. Author B has received a speaker honorarium from Company X and owns stocks in Company Y. Author C has been involved as a consultant and expert witness in Company Z. Author D is the inventor of patent X.</p>
+                    <p>If no conflicts exist, the authors should state:</p>
+                    <p>Conflicts of Interest: The authors declare no conflicts of interest.</p>
+
+                    <h3>Editorial Procedures and Peer-Review</h3>
+                    <p>All submitted manuscripts received by the Editorial Office will be checked by a professional in-house Managing Editor to determine whether they are properly prepared and whether they follow the ethical policies of the journal, including those for human and animal experimentation. Manuscripts that do not fit the journal's ethics policy or do not meet the standards of the journal will be rejected before peer-review. Manuscripts that are not properly prepared will be returned to the authors for revision and resubmission. After these checks, the Managing Editor will consult the journals’ Editor-in-Chief or Associate Editors to determine whether the manuscript fits the scope of the journal and whether it is scientifically sound. No judgment on the potential impact of the work will be made at this stage. Reject decisions at this stage will be verified by the Editor-in-Chief. </p>
+                    <p><i>Peer-Review</i></p>
+                    <p>Once a manuscript passes the initial checks, it will be assigned to at least two independent experts for peer-review. A single-blind review is applied, where authors' identities are known to reviewers. Peer review comments are confidential and will only be disclosed with the express agreement of the reviewer.</p>
+                    <p>In the case of regular submissions, in-house assistant editors will invite experts, including recommendations by an academic editor. These experts may also include Editorial Board Members and Guest Editors of the journal. Potential reviewers suggested by the authors may also be considered. Reviewers should not have published with any of the co-authors during the past five years and should not currently work or collaborate with any of the institutions of the co-authors of the submitted manuscript.</p>
+                    <p><i>Optional Open Peer-Review</i></p>
+                    <p>The journal operates optional open peer-review: Authors are given the option for all review reports and editorial decisions to be published alongside their manuscript. In addition, reviewers can sign their review, i.e., identify themselves in the published review reports. Authors can alter their choice for open review at any time before publication, but once the paper has been published changes will only be made at the discretion of the Publisher and Editor-in-Chief. We encourage authors to take advantage of this opportunity as proof of the rigorous process employed in publishing their research. To guarantee impartial refereeing, the names of referees will be revealed only if the referees agree to do so, and after a paper has been accepted for publication.</p>
+                    <p><i>Editorial Decision and Revision</i></p>
+                    <p>All the articles, reviews and communications published in Plow journals go through the peer-review process and receive at least two reviews. The in-house editor will communicate the decision of the academic editor, which will be one of the following: </p>
+                    
+
+
+                    <ul style="list-style: disc;padding-left: 20px ;">
+                      <li style="list-style: disc;overflow: visible;padding: 0;">Accept after Minor Revisions:<br>The paper is in principle accepted after revision based on the reviewer’s comments. Authors are given five days for minor revisions.</li>
+                      <li style="list-style: disc;overflow: visible;padding: 0;">Reconsider after Major Revisions: <br>he acceptance of the manuscript would depend on the revisions. The author needs to provide a point by point response or provide a rebuttal if some of the reviewer’s comments cannot be revised. Usually, only one round of major revisions is allowed. Authors will be asked to resubmit the revised paper within a suitable time frame, and the revised version will be returned to the reviewer for further comments. </li>
+                      <li style="list-style: disc;overflow: visible;padding: 0;">Reject and Encourage Resubmission:<br/>If additional experiments are needed to support the conclusions, the manuscript will be rejected and the authors will be encouraged to re-submit the paper once further experiments have been conducted.</li>
+                      <li style="list-style: disc;overflow: visible;padding: 0;">Reject: <br/>The article has serious flaws, and/or makes no original significant contribution. No offer of resubmission to the journal is provided.</li>
+                    </ul>
+                    <p>All reviewer comments should be responded to in a point-by-point fashion. Where the authors disagree with a reviewer, they must provide a clear response. </p>
+                    <p><i>Author Appeals</i></p>
+                    <p>Authors may appeal a rejection by sending an e-mail to the Editorial Office of the journal. The appeal must provide a detailed justification, including point-by-point responses to the reviewers' and/or Editor's comments. The Managing Editor of the journal will forward the manuscript and related information (including the identities of the referees) to the Editor-in-Chief, Associate Editor, or Editorial Board member. The academic Editor being consulted will be asked to give an advisory recommendation on the manuscript and may recommend acceptance, further peer-review, or uphold the original rejection decision. A reject decision at this stage is final and cannot be reversed.</p>
+                    <p>In the case of a special issue, the Managing Editor of the journal will forward the manuscript and related information (including the identities of the referees) to the Editor-in-Chief who will be asked to give an advisory recommendation on the manuscript and may recommend acceptance, further peer-review, or uphold the original rejection decision. A reject decision at this stage will be final and cannot be reversed. </p>
+                    <p><i>Production and Publication</i></p>
+                    <p>Once accepted, the manuscript will undergo professional copy-editing, English editing, proofreading by the authors, final corrections, pagination, and, publication on the www.plowpub.com website.</p>
+                  </div>
             </div>
             <!-- <div class="inside_r fr">
         <img
