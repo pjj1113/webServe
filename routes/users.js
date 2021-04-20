@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var utils = require('../utils');
+const sendEmail = require('../utils//sendEmail.js');
 
 var db = require('./db') //引入数据库封装模块
 /* GET users listing. */
@@ -20,6 +21,24 @@ router.post('/add', function (req, res, next) {
     if (err) {
       console.log('连接错误', err)
     } else {
+      let email = {
+        title: '用户注册',
+        body:`
+          <h1>您好：</h1>
+          <p style="font-size: 18px;color:#000;">
+              ${userName}账户注册成功，
+          </p>
+          <p>用户名称：${ userName }</p>
+          <p>用户邮箱：${ Email }</p>
+          `
+        }
+      let emailCotent = {
+          from: '844745374@qq.com', // 发件人地址
+          to: Email, // 收件人地址，多个收件人可以使用逗号分隔
+          subject: email.title, // 邮件标题
+          html: email.body // 邮件内容
+        };
+        sendEmail.send(emailCotent)
       res.send({
         code: 200,
         message:'添加成功'
@@ -35,7 +54,6 @@ router.post('/update', function (req, res, next) {
   var password = req.body.password;
   var sql = `UPDATE user SET \`user_password\`='${ password }' WHERE \`user_id\`='${ id }';`
   //查询users表
-  console.log(req.body)
   var sqlArr = []
   var callBack = (err, data) => {
     console.log(data)

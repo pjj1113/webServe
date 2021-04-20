@@ -33,8 +33,8 @@ $(function() {
 	}).trigger("mouseleave");
 	
 	function showPics(index) { 
-    if(index >2) {
-      index = index -3
+    if(index >1) {
+      index = index -2
     }
     console.log(index, sWidth, index*sWidth)
 		var nowLeft = -index*sWidth; 
