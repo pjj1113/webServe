@@ -10,6 +10,27 @@
         url('chrome-extension://moombeodfomdpjnpocobemoiaemednkg/fonts/element-icons.ttf ') format('truetype');
       /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
     }
+    html,body{
+      position: relative;
+      width: 100%;
+      height: 100%;
+    }
+    .banner-img {
+      position: relative;
+    }
+    .banner-img a{
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      width: 100px;
+      height: 40px;
+      font-size: 24px;
+      text-align: center;
+      line-height: 40px;
+      background: #363636;
+      color: #fff;
+      cursor: pointer;
+    }
   </style>
 </head>
 <body>
@@ -27,7 +48,8 @@
   <script type="text/javascript" src="./js/jquery.js"></script>
   <script type="text/javascript" src="./js/jquery.slide.js"></script>
   <script type="text/javascript" src="./js/index.js"></script>
-
+  <script type="text/javascript" src="http://www.jb51.net/workspace/js/jquery-1.7.min.js"></script>
+  <script type="text/javascript" src="./js/box.js"></script>
 
 
   <div class="warp bg_top">
@@ -62,13 +84,14 @@
     <div class="mainbox focuspic">
       <div id="focus">
         <ul style="left: -1960px; width: 2940px;">
-          <li><img src="./img/16591098990_2745cd740b_o.jpg" width="980" height="329"></li>
-          <li><img src="./img/32962336551_dd0ab11723_o.png" width="980" height="329"></li>
-
+          <li class="banner-img"><img src="./img/329623363432432432432.png" width="980" height="329"/><a>Submit</a></li>
+          <li class="banner-img"><img src="./img/32962336551_dd0ab11723_o.png" width="980" height="329"/><a>Submit</a></li>
+          <li class="banner-img"><img src="./img/16591098990_2745cd740b_o.jpg" width="980" height="329"/><a>Submit</a></li>
         </ul>
         <div class="btnBg" style="opacity: 0.5;"></div>
-        <div class="btn"><span class="" style="opacity: 0.8;"></span><span
-            style="opacity: 1;" class="on"></span></div>
+        <div class="btn">
+          <span class="" style="opacity: 0.8;"></span><span class="" style="opacity: 0.8;"></span><span style="opacity: 1;" class="on"></span>
+        </div>
       </div>
     </div>
   </div>
@@ -113,6 +136,63 @@
     } else {
       ('#username').css({"display":"none"})
     }
+  </script>
+  <script type="text/javascript">
+   (function () {
+    var div = document.createElement('div');
+    div.innerHTML = `Plow Publishing offers <span style="color:#cb1d25">article processing charges (APCs) waivers</span> to papers of all authors as of December 2021`
+    div.style.background = '#fff';
+    div.style.position = 'fixed';
+    div.style.zIndex = 1000;
+    div.style.left = '0px';
+    div.style.top = '0px';
+    div.style.border = '1px solid #ccc';
+    div.style.fontSize = '20px';
+    div.style.fontFamily = 'Microsoft YaHei';
+    div.style.borderRadius = '6px';
+    div.style.color = '#000';
+    div.style.width = '300px';
+    div.style.height = '150px';
+    div.style.padding = '30px';
+    div.style.lineHeight = '30px'
+    document.body.appendChild(div);
+
+
+    var max_X = document.body.clientWidth - div.offsetWidth,// 最大范围
+      max_Y = document.body.clientHeight - div.offsetHeight,
+      direction_X = 1, // 方向
+      direction_Y = 1,
+
+      speed_X = 1,// 速度
+      speed_Y = 1;
+
+    var timer = null;
+
+    function moveXY() {
+      var left_X = parseInt(div.style.left);
+      var top_Y = parseInt(div.style.top);
+
+      direction_X = (left_X > max_X || left_X < 0) ? -direction_X : direction_X;// 越界规范
+      direction_Y = (top_Y > max_Y || top_Y < 0) ? -direction_Y : direction_Y;
+
+      div.style.left = (left_X + direction_X * speed_X) + 'px';
+      div.style.top = (top_Y + direction_Y * speed_Y) + 'px';
+
+      timer = setTimeout(arguments.callee, 16.7);//类似递归调用
+    }
+
+    moveXY();
+    div.onmouseenter = function (event) {
+      event = event || window.event;
+      clearTimeout(timer);
+
+
+    };
+    div.onmouseout = function () {
+      moveXY();
+    }
+  })();
+
   </script>
 </body>
 <style type="text/css">
