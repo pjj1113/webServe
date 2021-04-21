@@ -22,14 +22,15 @@ router.post('/add', function (req, res, next) {
       console.log('连接错误', err)
     } else {
       let email = {
-        title: '用户注册',
+        title: 'You are welcome to use PlowPub! Activate your account now',
         body:`
-          <h1>您好：</h1>
-          <p style="font-size: 18px;color:#000;">
-              ${userName}账户注册成功，
-          </p>
-          <p>用户名称：${ userName }</p>
-          <p>用户邮箱：${ Email }</p>
+        Please verify your email address to activate your account.
+        Dear ${userName}:
+        Thank you for registering a Plow Publishing account!  To activate your account, please click the button below to verify your email address.  
+        Yes, this is my email address 
+        Sincerely
+        Plow Publishing
+        Copyright  2021 PlowPub. all rights reserved. 
           `
         }
       let emailCotent = {
