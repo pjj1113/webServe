@@ -34,7 +34,7 @@
   </style>
 </head>
 <body>
-  <script>document.title = 'Plow Publishing';</script>
+  <script>document.title = 'Home Plow Publishing';</script>
   <meta name="viewport" content="width=1250">
 
   <script>
@@ -56,7 +56,7 @@
     <div class="mainbox top">
       <!-- <div class="lang"><a href="http://www.easyedition.net/en/">language: English</a></div> -->
       <div class="top_layout">
-        <div class="header"><img src="./img/logo.png" title=" Plow Publishing logo"><span>Plow</span><strong>Publishing</strong></div>
+        <div class="header"><img src="./img/logo.png" title="Plow Publishing logo"><span>Plow</span><strong>Publishing</strong></div>
         <span class="fr"  id="login">
           <a href="./html/Register.html">Register</a>|<a href="./html/login.html">Log in</a>
         </span>
@@ -108,8 +108,9 @@
       <div class="contentbox_l fl">
         <h2>Service</h2>
         <span>
-          360-Degree services <br/>24/7 Editorial and publishing support
+          360-Degree services <br/>
         </span>
+        <span>24/7 Editorial and publishing support</span>
       </div>
       <div class="contentbox_m fl">
         <h2>Ethics</h2>
@@ -138,60 +139,60 @@
     }
   </script>
   <script type="text/javascript">
-   (function () {
-    var div = document.createElement('div');
-    div.innerHTML = `Plow Publishing offers <span style="color:#cb1d25">article processing charges (APCs) waivers</span> to papers of all authors as of December 2021`
-    div.style.background = '#fff';
-    div.style.position = 'fixed';
-    div.style.zIndex = 1000;
-    div.style.left = '0px';
-    div.style.top = '0px';
-    div.style.border = '1px solid #ccc';
-    div.style.fontSize = '20px';
-    div.style.fontFamily = 'Microsoft YaHei';
-    div.style.borderRadius = '6px';
-    div.style.color = '#000';
-    div.style.width = '300px';
-    div.style.height = '150px';
-    div.style.padding = '30px';
-    div.style.lineHeight = '30px'
-    document.body.appendChild(div);
+  //  (function () {
+  //   var div = document.createElement('div');
+  //   div.innerHTML = `Plow Publishing offers <span style="color:#cb1d25">article processing charges (APCs) waivers</span> to papers of all authors as of December 2021`
+  //   div.style.background = '#fff';
+  //   div.style.position = 'fixed';
+  //   div.style.zIndex = 1000;
+  //   div.style.left = '0px';
+  //   div.style.top = '0px';
+  //   div.style.border = '1px solid #ccc';
+  //   div.style.fontSize = '20px';
+  //   div.style.fontFamily = 'Microsoft YaHei';
+  //   div.style.borderRadius = '6px';
+  //   div.style.color = '#000';
+  //   div.style.width = '300px';
+  //   div.style.height = '150px';
+  //   div.style.padding = '30px';
+  //   div.style.lineHeight = '30px'
+  //   document.body.appendChild(div);
 
 
-    var max_X = document.body.clientWidth - div.offsetWidth,// 最大范围
-      max_Y = document.body.clientHeight - div.offsetHeight,
-      direction_X = 1, // 方向
-      direction_Y = 1,
+  //   var max_X = document.body.clientWidth - div.offsetWidth,// 最大范围
+  //     max_Y = document.body.clientHeight - div.offsetHeight,
+  //     direction_X = 1, // 方向
+  //     direction_Y = 1,
 
-      speed_X = 1,// 速度
-      speed_Y = 1;
+  //     speed_X = 1,// 速度
+  //     speed_Y = 1;
 
-    var timer = null;
+  //   var timer = null;
 
-    function moveXY() {
-      var left_X = parseInt(div.style.left);
-      var top_Y = parseInt(div.style.top);
+  //   function moveXY() {
+  //     var left_X = parseInt(div.style.left);
+  //     var top_Y = parseInt(div.style.top);
 
-      direction_X = (left_X > max_X || left_X < 0) ? -direction_X : direction_X;// 越界规范
-      direction_Y = (top_Y > max_Y || top_Y < 0) ? -direction_Y : direction_Y;
+  //     direction_X = (left_X > max_X || left_X < 0) ? -direction_X : direction_X;// 越界规范
+  //     direction_Y = (top_Y > max_Y || top_Y < 0) ? -direction_Y : direction_Y;
 
-      div.style.left = (left_X + direction_X * speed_X) + 'px';
-      div.style.top = (top_Y + direction_Y * speed_Y) + 'px';
+  //     div.style.left = (left_X + direction_X * speed_X) + 'px';
+  //     div.style.top = (top_Y + direction_Y * speed_Y) + 'px';
 
-      timer = setTimeout(arguments.callee, 16.7);//类似递归调用
-    }
+  //     timer = setTimeout(arguments.callee, 16.7);//类似递归调用
+  //   }
 
-    moveXY();
-    div.onmouseenter = function (event) {
-      event = event || window.event;
-      clearTimeout(timer);
+  //   moveXY();
+  //   div.onmouseenter = function (event) {
+  //     event = event || window.event;
+  //     clearTimeout(timer);
 
 
-    };
-    div.onmouseout = function () {
-      moveXY();
-    }
-  })();
+  //   };
+  //   div.onmouseout = function () {
+  //     moveXY();
+  //   }
+  // })();
 
   </script>
 </body>

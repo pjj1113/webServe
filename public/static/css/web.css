@@ -145,6 +145,7 @@ p.p_t_m_5 em{font-style:normal; color:#669900;}
 /* .formbox p.formbox_txt#loginbtn input{background:url(../images/formbtn_login.jpg) no-repeat;} */
 /* .formbox p.formbox_txt#loginreg input{background:url(../images/formbtn_re.jpg) no-repeat;} */
 /* .formbox p.formbox_txt#loginrem{ background:url(../images/icon_5.jpg) 80px 12px no-repeat;} */
+#login a:hover { background-color: #cedbe0; }
 .formbox p.formbox_txt#loginrem{padding:7px 0 7px 100px; width:340px;}
 .formbox p.formbox_txt#loginbtn em{ font-size:12px; padding:0 0 0 30px;}
 .formbox p.formbox_txt#loginbtn em a:link,.formbox p.formbox_txt#loginbtn em a:visited{color:#0000cc; text-decoration:underline;}
@@ -163,3 +164,14 @@ p.p_t_m_5 em{font-style:normal; color:#669900;}
 .inside_l li img,.inside_l li span{ display:block; float: left;}
 .inside_l li span{width:452px; text-indent:0;font-size:12px; line-height:12px;padding:0 0 0 20px;}
 .inside_l li span b{font-size:14px; line-height:25px;}
+
+.h2 {
+  font-size: 25px;
+  line-height: 40px;
+  color: #666;
+}
+.h3 {
+  font-size: 20px;
+  line-height: 35px;
+  color: #666;
+}
