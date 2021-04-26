@@ -1,11 +1,11 @@
 @charset "gb2312";
 /* CSS Document */
 
-body{font-family:宋体,Arial Narrow;background:#fff;font-size:12px; line-height:23px;color:#666;}
-body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,p,span,form,input,textarea, table {padding:0; margin:0;}
+body{font-family:宋体,Arial Narrow;background:#fff;font-size:12px; line-height:23px;color:#666;font-family: "Daytona W01 Regular", sans-serif;}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,p,span,form,input,textarea, table {padding:0; margin:0;font-family: "Daytona W01 Regular", sans-serif;}
 img{vertical-align:top;border:0;}
-h1,h2,h3,h4,h5,h6{font-size:14px;}
-ol,ul ,li{list-style:none;}   
+h1,h2,h3,h4,h5,h6{font-size:14px;font-family: "Daytona W01 Regular", sans-serif;}
+ol,ul ,li{list-style:none;font-family: "Daytona W01 Regular", sans-serif;}   
 a {color:#333;text-decoration:none;}
 a:visited {color:#333;text-decoration:none;}
 a:hover {color:#fff;text-decoration:underline;}
@@ -26,7 +26,7 @@ a:active {color:#fff;}
 /* .bg_banner{ background:url(../images/banner_bg.jpg) repeat-x;} */
 .mainbox{width:980px;margin:0 auto;}
 .top,.menu{height:90px;padding:0 10px; width:960px;}
-.lang{ height:22px; font-family:微软雅黑;}
+.lang{ height:22px;font-family: "Daytona W01 Regular", sans-serif;}
 .lang a:link,.lang a:visited{color:#006d9c; float:right; line-height:22px;padding:0 13px 0 0;}
 .lang a:hover{color:#000; text-decoration:none;}
 .top_layout h1,.top_layout span{ display:block; margin:5px 0 0 0;}
@@ -34,8 +34,8 @@ a:active {color:#fff;}
 .top_layout span a:link,.top_layout span a:visited{font-size:14px;color:#000;padding:0 10px 0;}
 .top_layout span a:hover{color:#000; text-decoration:underline;}
 .header { display:flex !important;align-items: center;font-size:23px  }
-.header span { color:#ff0000;padding:0;margin:0 15px;font-weight: 700; }
-.header strong { color:rgb(31,80,121);padding:0;margin:0;font-weight: 700; }
+.header span { color:#ff0000;padding:0;margin:0 10px;font-weight: 900;transform: scale(1.2); }
+.header strong { color:rgb(31,80,121);padding:0;margin:0;font-weight: 900; }
 .header img{ width:100px}
 .top_layout { display:flex; height:100px;justify-content: space-between;}
 
@@ -45,7 +45,7 @@ a:active {color:#fff;}
 .menu li a:hover{ background:#ebf1f5;text-decoration:none;}
 .menu li.current a{ background:#ebf1f5;color:#00b8b0;}
 
-h2{width:270px; font:normal 16px/20px 微软雅黑;color:#034099;  padding:0 0 0 24px;}
+h2{width:270px; font:normal 16px/20px Daytona W01 Regular;color:#034099; font-family: "Daytona W01 Regular", sans-serif;  padding:0 0 0 24px;}
 .focuspic{height:329px;}
 .title{height:36px;}
 .title img.fr{margin:4px 5px 0 0;}
@@ -109,7 +109,7 @@ p.p_t_m_5 em{font-style:normal; color:#669900;}
 #focus .next{right:0;background-position:right top;}
 
 .banner{height:180px;}
-.nowpostion{height:35px; line-height:35px; padding:0 10px;width:960px;}
+.nowpostion{height:35px; line-height:30px; padding:0 10px;width:960px;}
 .inside_l{width:630px;border-top:1px solid #e2e2e2;padding:20px 5px 0; font-size:14px; line-height:26px;}
 .inside_l b{color:#333; font-size:16px;}
 .inside_l p{padding:0 0 10px 0;}
@@ -153,9 +153,9 @@ p.p_t_m_5 em{font-style:normal; color:#669900;}
 
 
 .price_tab{ background:#999; text-indent:0; font-weight:bold; line-height:35px;}
-.price_tab th{ background:#e3e9f1; color:#cc0000;}
+.price_tab th{ background:#e3e9f1;}
 .price_tab td{ background:#fafafa; text-align:center; font-size:14px;}
-.price_tab td.pricecount{color:#cc0000;}
+/* .price_tab td.pricecount{color:#cc0000;} */
 .price_tab td.pricecount input{border:1px solid #ccc; width:50px; height:17px; background:#fff;}
 .inside_l dt{font-size:14px; font-weight:bold; float:left; width:100%;}
 .inside_l dd{width:33%; float:left; padding:2px 0;}
@@ -169,9 +169,20 @@ p.p_t_m_5 em{font-style:normal; color:#669900;}
   font-size: 25px;
   line-height: 40px;
   color: #666;
+  width: 100%;
 }
 .h3 {
   font-size: 20px;
   line-height: 35px;
   color: #666;
+  width: 100%;
+}
+.footer {
+  height: 128px;
+  background: #183642;
+  padding: 10 40px;
+  box-sizing: border-box;
+}
+.footer h3 {
+  font-size: 22px;
 }
