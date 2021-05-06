@@ -28,8 +28,28 @@
       text-align: center;
       line-height: 40px;
       background: #363636;
-      color: #fff;
+      color: #fff !important;
       cursor: pointer;
+    }
+    .top-box {
+      display: block;
+      position: fixed;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100px;
+      background: #16fabc;
+      font-size: 20px;
+      padding:40px 0;
+    }
+    .top-box p{
+      text-align: center;
+      margin-top: 40px;
+    }
+    .dow_pag {
+      position: absolute;
+      right: 30px;
+      top: 30px;
     }
   </style>
 </head>
@@ -84,9 +104,9 @@
     <div class="mainbox focuspic">
       <div id="focus">
         <ul style="left: -1960px; width: 2940px;">
-          <li class="banner-img"><img src="./img/329623363432432432432.png" width="980" height="329"/><a>Submit</a></li>
-          <li class="banner-img"><img src="./img/32962336551_dd0ab11723_o.png" width="980" height="329"/><a>Submit</a></li>
-          <li class="banner-img"><img src="./img/16591098990_2745cd740b_o.jpg" width="980" height="329"/><a>Submit</a></li>
+          <li class="banner-img"><img src="./img/329623363432432432432.png" width="980" height="329"/><a href="./html/uploadFile.html">Submit</a></li>
+          <li class="banner-img"><img src="./img/32962336551_dd0ab11723_o.png" width="980" height="329"/><a href="./html/uploadFile.html">Submit</a></li>
+          <li class="banner-img"><img src="./img/16591098990_2745cd740b_o.jpg" width="980" height="329"/><a href="./html/uploadFile.html">Submit</a></li>
         </ul>
         <div class="btnBg" style="opacity: 0.5;"></div>
         <div class="btn">
@@ -131,6 +151,10 @@
     <h3 style="color: #fff;">Plow Publishing</h3>
     <p style="color: #fff;line-height: 40px;">@2021 Plow Publishing unless otherwise stated</p>
   </div>
+  <div class="top-box">
+    <span onclick="dow_pag()" class="dow_pag">X</span>
+    <p>Plow Publishing offers <span style="color:#cb1d25">article processing charges (APCs) waivers</span> to papers of all authors as of December 2021</p>
+  </div>
   <audio controls="controls" style="display: none;"></audio>
   <script>
     var userInfo = localStorage.getItem('userInfo') ? JSON.parse(localStorage.getItem('userInfo')) : '';
@@ -141,8 +165,12 @@
     } else {
       ('#username').css({"display":"none"})
     }
+    function dow_pag() {
+      $('.top-box').css({"display":"none"})
+    }
+    
   </script>
-  <script type="text/javascript">
+  <!-- <script type="text/javascript">
    (function () {
     var div = document.createElement('div');
     div.innerHTML = `Plow Publishing offers <span style="color:#cb1d25">article processing charges (APCs) waivers</span> to papers of all authors as of December 2021`
@@ -196,9 +224,9 @@
     div.onmouseout = function () {
       moveXY();
     }
-  })();
+  })(); -->
 
-  </script>
+  <!-- </script> -->
 </body>
 <style type="text/css">
   #yddContainer {
