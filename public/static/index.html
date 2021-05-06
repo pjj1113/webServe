@@ -33,7 +33,7 @@
     }
     .top-box {
       display: block;
-      position: fixed;
+      position: relative;
       left: 0;
       top: 0;
       width: 100%;
@@ -71,7 +71,10 @@
   <script type="text/javascript" src="http://www.jb51.net/workspace/js/jquery-1.7.min.js"></script>
   <script type="text/javascript" src="./js/box.js"></script>
 
-
+  <div class="top-box">
+    <span onclick="dow_pag()" class="dow_pag">X</span>
+    <p>Plow Publishing offers <span style="color:#cb1d25">article processing charges (APCs) waivers</span> to papers of all authors as of December 2021</p>
+  </div>
   <div class="warp bg_top">
     <div class="mainbox top">
       <!-- <div class="lang"><a href="http://www.easyedition.net/en/">language: English</a></div> -->
@@ -134,27 +137,25 @@
       </div>
       <div class="contentbox_m fl">
         <h2>Ethics</h2>
-        <span>
-          Full peer review All journals published by PLOW are members of Committee on Publication Ethics (COPE)
-        </span>
+        <span> Full peer review All journals published by PLOW are members of Committee on </span>
+        <span>Publication Ethics (COPE)</span>
       </div>
       <div class="contentbox_r fl">
         <h2>Speed</h2>
         <span>
-          20 Days first decision guaranteed Twitter:@PLOWPub  © 2021 PLOW Publishing unless otherwise stated
+          20 Days first decision guaranteed
         </span>
+       
       </div>
       
     </div>
   </div>
-  <div style="position: absolute;bottom: 0;width: 100%;left: 0;" class="footer">
+  <div style="margin-top: 20px;position:relative" class="footer">
     <h3 style="color: #fff;">Plow Publishing</h3>
     <p style="color: #fff;line-height: 40px;">@2021 Plow Publishing unless otherwise stated</p>
+    <a href="https://twitter.com/PlowPub" style="position: absolute;right: 40px;top: 20px;"><img style="width: 30px;height: 30px;"  src="./img/logo_foot.png"/></a>
   </div>
-  <div class="top-box">
-    <span onclick="dow_pag()" class="dow_pag">X</span>
-    <p>Plow Publishing offers <span style="color:#cb1d25">article processing charges (APCs) waivers</span> to papers of all authors as of December 2021</p>
-  </div>
+  
   <audio controls="controls" style="display: none;"></audio>
   <script>
     var userInfo = localStorage.getItem('userInfo') ? JSON.parse(localStorage.getItem('userInfo')) : '';

@@ -26,7 +26,7 @@
   }
 
   .register p .input-text {
-    width: 263px;
+    width: 273px;
     height: 32px;
     background: url(../img/forminput.jpg) no-repeat;
     border: none;
@@ -101,11 +101,15 @@
   </div>
 
   <div class="register">
-    <p><span>Select Journal or Author Services:</span><input class="input-text" id="user" type="text" /></p>
-    <p><span>Manuscript (Word/ZIP):</span><input type="file" id="fileName"></p>
-    <p><span>Supplementary (Word/ZIP):</span><input type="file" id="fileName"></p>
+    <p><span>Select Journal or Author Services:</span>
+      <select>
+        <option>FEPH</option>
+        <option>English Editing</option>
+      </select></p>
+    <p><span>Manuscript (Word/ZIP):</span><input type="file" id="fileName"><strong> &lt;50 MB</strong></p>
+    <p><span>Supplementary (Word/ZIP):</span><input type="file" id="fileName"><strong> &lt;50 MB</strong></p>
     <!-- <img id="img" src="./bw1.jpg" alt=""> -->
-   <button class="btn" onclick="upload()">上传</button>
+   <button class="btn" onclick="upload()">submit</button>
   </div>
   <script type="text/javascript">
     var client = new OSS.Wrapper({

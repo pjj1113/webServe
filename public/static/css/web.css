@@ -35,7 +35,7 @@ a:active {color:#fff;}
 .top_layout span a:hover{color:#000; text-decoration:underline;}
 .header { display:flex !important;align-items: center;font-size:23px  }
 .header span { color:#ff0000;padding:0;margin:0 10px;font-weight: 900;transform: scale(1.2); }
-.header strong { color:rgb(31,80,121);padding:0;margin:0;font-weight: 900; }
+.header strong { color:rgb(31,80,121);padding:0;margin: 0 0 0 20px;font-weight: 900; transform: scale(1.2);}
 .header img{ width:100px}
 .top_layout { display:flex; height:100px;justify-content: space-between;}
 
