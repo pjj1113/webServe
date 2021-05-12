@@ -106,8 +106,8 @@
         <option>FEPH</option>
         <option>English Editing</option>
       </select></p>
-    <p><span>Manuscript (Word/ZIP):</span><input type="file" id="fileName"><strong> &lt;50 MB</strong></p>
-    <p><span>Supplementary (Word/ZIP):</span><input type="file" id="fileName"><strong> &lt;50 MB</strong></p>
+    <p><span>Manuscript (Word/ZIP):</span><input type="file" id="fileName01"><strong> &lt;50 MB</strong></p>
+    <p><span>Supplementary (Word/ZIP):</span><input type="file" id="fileName02"><strong> &lt;50 MB</strong></p>
     <!-- <img id="img" src="./bw1.jpg" alt=""> -->
    <button class="btn" onclick="upload()">submit</button>
   </div>
@@ -117,25 +117,73 @@
         accessKeyId: "LTAI5tJG2oFF5kMcV8BqBdMw",
         accessKeySecret: "0KRqXGdJRqeT07hlTd7DPomXru5qsu",
         bucket: "project-ts"  //要存储的目录名
-    });
 
+        // region: "oss-cn-hongkong", //阿里云获取
+        // accessKeyId: "LTAI5tAT5cHmTeWL93uNDrrh",
+        // accessKeySecret: "0re2c4hKVWDTBm3pjZ34XvbtMlG3qn",
+        // bucket: "hkplow"  //要存储的目录名
+    });
+    var fileurl = {
+        url_01: '',
+        url_02: ''
+      }
     function upload() {
-        var file = document.getElementById("fileName").files[0];
-        var val = document.getElementById("fileName").value;
-        // 取出文件后缀名
-        var suffix = val.substr(val.indexOf("."));
-        var obj = timestamp();
-        // var storeAs = 'upload-file/' + "/" + obj + suffix;
-        var storeAs = obj + suffix;
-        client.multipartUpload(storeAs, file).then(function (result) {
-            var url = result.res.requestUrls[0];
-            var length = url.lastIndexOf('?');
-            var imgUrl = url.substr(0,length);//文件最终路径
-            // $("#img").attr("src",url.substr(0,length))
-            console.log(result)
-        }).catch(function (err) {
-            console.log(err);
-        });
+      var file_one = document.getElementById("fileName01").files[0];
+      var file_tow = document.getElementById("fileName02").files[0];
+      var val = document.getElementById("fileName01").value;
+      // 取出文件后缀名
+      var suffix = val.substr(val.indexOf("."));
+      var obj = timestamp();
+      var storeAs = 'upload-file/' + "/" + obj +'/'+ file_one.name;
+      var storeAs = obj + suffix;
+      
+      client.multipartUpload(storeAs, file_one).then(function (result) {
+          var url = result.res.requestUrls[0];
+          // $("#img").attr("src",url.substr(0,length))
+          fileurl.url_01 = result.res.requestUrls[0].split('?')[0]
+          console.log(result,url)
+          if(file_tow) {
+            towUploadFile()
+          } else {
+            senFile()
+          }
+      }).catch(function (err) {
+        
+      });
+    }
+    function towUploadFile() {
+      var file_tow = document.getElementById("fileName02").files[0];
+      var val = document.getElementById("fileName02").value;
+      var suffix = val.substr(val.indexOf("."));
+      var obj = timestamp();
+      var storeAs = 'upload-file/' + "/" + obj +'/'+ file_tow.name;
+      var storeAs = obj + suffix;
+
+      client.multipartUpload(storeAs, file_tow).then(function (result) {
+          var url = result.res.requestUrls[0];
+          // $("#img").attr("src",url.substr(0,length))
+          fileurl.url_02 = result.res.requestUrls[0].split('?')[0]
+          console.log(fileurl)
+      }).catch(function (err) {
+        
+      });
+    }
+    function senFile() {
+      var request = new Request('/users/fend/email', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({
+            url_01: fileurl.url_01,
+            url_02: fileurl.url_02,
+          })
+      });
+      fetch(request).then(res => {
+        console.log(res)
+      }).then(res => {
+
+      })
     }
     /**
      * 生成文件名

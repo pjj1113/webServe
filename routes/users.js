@@ -125,4 +125,27 @@ router.post('/upload', upload.any(), function(req, res, next) {
 });
 
 
+// 上传文件发送邮件
+router.post('/fend/email', function (req, res, next) {
+  console.log(req.body)
+  let email = {
+    title: '',
+    body:`
+      <p>Select Journal or Author Services:</p>
+      <p>Manuscript:${req.body.url_01}</p>
+      <p>Supplementary:${req.body.url_02}</p>
+      `
+    }
+  let emailCotent = {
+      from: '844745374@qq.com', // 发件人地址
+      to: '15705547960@163.com', // 收件人地址，多个收件人可以使用逗号分隔
+      subject: email.title, // 邮件标题
+      html: email.body // 邮件内容
+    };
+    sendEmail.send(emailCotent)
+  res.send({
+    code: 200,
+    message:'发送成功'
+  })
+})
 module.exports = router;
