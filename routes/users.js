@@ -13,10 +13,10 @@ var db = require('./db') //引入数据库封装模块
 router.post('/add', function (req, res, next) {
   //查询users表
   // console.log(userName,password , Email)
-  console.log(req)
   let id = new Date().valueOf().toString()+parseInt(Math.random()*10000);
   let create_date= utils.parseTime(new Date(), '{y}-{m}-{d} {h}:{i}:{s}');
   let userName = '',password= '', Email='';
+  
   req.body.userName ? userName = req.body.userName : '';
   req.body.password ? password = req.body.password : '';
   req.body.Email ? Email = req.body.Email : '';
@@ -39,7 +39,7 @@ router.post('/add', function (req, res, next) {
           `
         }
       let emailCotent = {
-          from: '844745374@qq.com', // 发件人地址
+          from: 'postmaster@plowpub.com', // 发件人地址
           to: Email, // 收件人地址，多个收件人可以使用逗号分隔
           subject: email.title, // 邮件标题
           html: email.body // 邮件内容
@@ -52,6 +52,18 @@ router.post('/add', function (req, res, next) {
     }
   }
   db.sqlConnect(sql, sqlArr, callBack)
+  // db.sqlConnect(`SELECT * FROM user WHERE user_name='${ userName }';`, sqlArr,  (err, data) => {
+  //   if(data[0].user_name == userName) {
+  //     res.send({
+  //       code: 400,
+  //       message:'该用户名已被注册'
+  //     })
+  //   } else {
+     
+  //   }
+  // })
+  
+ 
 })
 
 router.post('/update', function (req, res, next) {
@@ -62,7 +74,7 @@ router.post('/update', function (req, res, next) {
   //查询users表
   var sqlArr = []
   var callBack = (err, data) => {
-    console.log(data)
+    // console.log(data)
     if (err) {
       console.log('连接错误', err)
     } else {
@@ -137,7 +149,7 @@ router.post('/fend/email', function (req, res, next) {
       `
     }
   let emailCotent = {
-      from: '844745374@qq.com', // 发件人地址
+      from: 'postmaster@plowpub.com', // 发件人地址
       to: '15705547960@163.com', // 收件人地址，多个收件人可以使用逗号分隔
       subject: email.title, // 邮件标题
       html: email.body // 邮件内容
