@@ -162,17 +162,19 @@ html,body {
       loding.show()
       fetch(request).then(res => {
         return res.text()
-        console.log(res)
+        
       }).then(res => {
         let info = JSON.parse(res)
         if(info.code == 200) {
-          console.log(res)
           localStorage.setItem('userInfo', JSON.stringify({ user: user }));
           loding.hide()
           window.location.href = window.location.origin + '/static/index.html';
         } else {
+          loding.hide()
           alert(info.message)
         }
+      }).catch(err => {
+        loding.hide()
       })
     }
   </script>

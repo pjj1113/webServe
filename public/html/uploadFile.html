@@ -208,6 +208,7 @@
           var url = result.res.requestUrls[0];
           // $("#img").attr("src",url.substr(0,length))
           fileurl.url_02 = result.res.requestUrls[0].split('?')[0]
+          senFile()
           console.log(fileurl)
           loding.hide()
       }).catch(function (err) {

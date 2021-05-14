@@ -20,48 +20,51 @@ router.post('/add', function (req, res, next) {
   req.body.userName ? userName = req.body.userName : '';
   req.body.password ? password = req.body.password : '';
   req.body.Email ? Email = req.body.Email : '';
-  var sql = `INSERT INTO user (\`user_id\`, \`user_name\`, \`user_password\`, \`create_date\`,  \`Email\`) VALUES ('${ id }','${ userName }','${ password }','${ create_date }','${ Email }')`
-  var sqlArr = []
-  var callBack = (err, data) => {
-    if (err) {
-      console.log('连接错误', err)
-    } else {
-      let email = {
-        title: 'You are welcome to use PlowPub! Activate your account now',
-        body:`
-        Please verify your email address to activate your account.
-        Dear ${userName}:
-        Thank you for registering a Plow Publishing account!  To activate your account, please click the button below to verify your email address.  
-        Yes, this is my email address 
-        Sincerely
-        Plow Publishing
-        Copyright  2021 PlowPub. all rights reserved. 
-          `
-        }
-      let emailCotent = {
-          from: 'postmaster@plowpub.com', // 发件人地址
-          to: Email, // 收件人地址，多个收件人可以使用逗号分隔
-          subject: email.title, // 邮件标题
-          html: email.body // 邮件内容
-        };
-        sendEmail.send(emailCotent)
+  let sqlArr = [];
+  db.sqlConnect(`SELECT * FROM user WHERE user_name='${ userName }';`, sqlArr,  (err, data) => {
+    if(data.length>0) {
+      console.log(data.length,999)
       res.send({
-        code: 200,
-        message:'添加成功'
+        code: 400,
+        message:'该用户名已被注册'
       })
+    } else {
+      var sql = `INSERT INTO user (\`user_id\`, \`user_name\`, \`user_password\`, \`create_date\`,  \`Email\`) VALUES ('${ id }','${ userName }','${ password }','${ create_date }','${ Email }')`
+      sqlArr = []
+      var callBack = (err, data) => {
+        if (err) {
+          console.log('连接错误', err)
+        } else {
+          let email = {
+            title: 'You are welcome to use PlowPub! Activate your account now',
+            body:`
+            Please verify your email address to activate your account.
+            Dear ${userName}:
+            Thank you for registering a Plow Publishing account!  To activate your account, please click the button below to verify your email address.  
+            Yes, this is my email address 
+            Sincerely
+            Plow Publishing
+            Copyright  2021 PlowPub. all rights reserved. 
+              `
+            }
+          let emailCotent = {
+              from: 'main@mail.chuanzhiyun.cn', // 发件人地址
+              to: Email, // 收件人地址，多个收件人可以使用逗号分隔
+              subject: email.title, // 邮件标题
+              html: email.body // 邮件内容
+            };
+            sendEmail.send(emailCotent)
+          res.send({
+            code: 200,
+            message:'添加成功'
+          })
+        }
+      }
+      db.sqlConnect(sql, sqlArr, callBack)
     }
-  }
-  db.sqlConnect(sql, sqlArr, callBack)
-  // db.sqlConnect(`SELECT * FROM user WHERE user_name='${ userName }';`, sqlArr,  (err, data) => {
-  //   if(data[0].user_name == userName) {
-  //     res.send({
-  //       code: 400,
-  //       message:'该用户名已被注册'
-  //     })
-  //   } else {
-     
-  //   }
-  // })
+    
+    
+  })
   
  
 })
@@ -143,13 +146,13 @@ router.post('/fend/email', function (req, res, next) {
   let email = {
     title: '',
     body:`
-      <p>Select Journal or Author Services:</p>
-      <p>Manuscript:${req.body.url_01}</p>
-      <p>Supplementary:${req.body.url_02}</p>
+      <p>Select Journal or Author Services:${ req.body.services }</p>
+      <p>Manuscript:<a href="${req.body.url_01}">${req.body.url_01}</a></p>
+      <p>Supplementary:<a href="${req.body.url_02}">${req.body.url_02}</a></p>
       `
     }
   let emailCotent = {
-      from: 'postmaster@plowpub.com', // 发件人地址
+      from: 'main@mail.chuanzhiyun.cn', // 发件人地址
       to: '15705547960@163.com', // 收件人地址，多个收件人可以使用逗号分隔
       subject: email.title, // 邮件标题
       html: email.body // 邮件内容

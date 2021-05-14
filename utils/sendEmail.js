@@ -5,8 +5,8 @@ const transporter = nodeemailer.createTransport({
   port: 25, // 每个邮箱的端口号可能是一样的，一般都使用465，但有些公司使用的就不是465
   secureConnection: false, // 是否使用 SSL
   auth: {
-    user: 'postmaster@plowpub.com', // 你自己的邮箱的邮箱地址
-    pass: 'Qq123456', // 授权码（不是邮箱密码）
+    user: 'main@mail.chuanzhiyun.cn', // 你自己的邮箱的邮箱地址
+    pass: 'AaQq123456', // 授权码（不是邮箱密码）
   },
 })
 
