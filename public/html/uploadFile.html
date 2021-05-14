@@ -6,6 +6,10 @@
   <title>Home Plow Publishing</title>
 </head>
 <style>
+  html,body {
+  width: 100%;
+  height: 100%;
+}
   .register {
     display: flex;
     flex-direction: column;
@@ -49,6 +53,40 @@
     text-align: center;
     margin-top: 30px;
       }
+      .loding {
+    display: none;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7); 
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+     }
+     @keyframes loader-01 {
+      0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+      }
+      100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+      }
+    }
+    .loader-01 {
+      position: fixed;
+      left: 0;
+      right: 0;
+      top: 0;
+      margin: auto;
+      bottom: 0;
+      height: 20px;
+      width: 20px;
+      border: .2em dotted #48D4C6;
+      border-radius: 50%;
+      -webkit-animation: 1s loader-01  linear infinite;
+      animation: 1s loader-01 linear infinite;
+  }
 </style>
 
 <body>
@@ -72,7 +110,7 @@
   <script type="text/javascript" src="../js/jquery.js"></script>
   <script type="text/javascript" src="../js/switchable.js"></script>
   <script type="text/javascript" src="../js/js.js"></script>
-
+  <div class="loding"><div class="loader-01"></div></div>
   <div class="warp bg_top">
     <div class="mainbox top">
       <!-- <div class="lang"><a href="http://www.easyedition.net/en/">language: English</a></div> -->
@@ -102,7 +140,7 @@
 
   <div class="register">
     <p><span>Select Journal or Author Services:</span>
-      <select>
+      <select id="Services">
         <option>FEPH</option>
         <option>English Editing</option>
       </select></p>
@@ -112,6 +150,7 @@
    <button class="btn" onclick="upload()">submit</button>
   </div>
   <script type="text/javascript">
+    var loding = $('.loding')
     var client = new OSS.Wrapper({
         region: "oss-cn-beijing", //阿里云获取
         accessKeyId: "LTAI5tJG2oFF5kMcV8BqBdMw",
@@ -128,8 +167,14 @@
         url_02: ''
       }
     function upload() {
+      loding.show()
       var file_one = document.getElementById("fileName01").files[0];
       var file_tow = document.getElementById("fileName02").files[0];
+      if(!file_one) {
+        alert('Please upload Manuscript')
+        loding.hide()
+        return
+      }
       var val = document.getElementById("fileName01").value;
       // 取出文件后缀名
       var suffix = val.substr(val.indexOf("."));
@@ -164,8 +209,9 @@
           // $("#img").attr("src",url.substr(0,length))
           fileurl.url_02 = result.res.requestUrls[0].split('?')[0]
           console.log(fileurl)
+          loding.hide()
       }).catch(function (err) {
-        
+        loding.hide()
       });
     }
     function senFile() {
@@ -175,6 +221,7 @@
             'Content-Type': 'application/json'
           },
           body: JSON.stringify({
+            services:$('#Services').val(),
             url_01: fileurl.url_01,
             url_02: fileurl.url_02,
           })
@@ -182,7 +229,8 @@
       fetch(request).then(res => {
         console.log(res)
       }).then(res => {
-
+        loding.hide()
+        alert('上传成功')
       })
     }
     /**

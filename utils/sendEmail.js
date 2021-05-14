@@ -1,6 +1,5 @@
 const nodeemailer = require('nodemailer')
 const transporter = nodeemailer.createTransport({
-  // host: 'smtp.qq.com', // QQ邮箱的SMTP地址
   // host: "smtp.163.com",						// 网易邮箱的SMTP地址
   host: "smtpdm.aliyun.com",// 阿里云的邮件地址
   port: 25, // 每个邮箱的端口号可能是一样的，一般都使用465，但有些公司使用的就不是465
